@@ -1,4 +1,5 @@
-class ninja {
+//Primera parte
+class Ninja {
     constructor(nombre){
         this.nombre = nombre;
         this.salud = 100;
@@ -22,7 +23,29 @@ class ninja {
     };
 };
 
-const ninja1 = new ninja("Hyabusa");
-//console.log(ninja1);
+const ninja1 = new Ninja("Hyabusa");
+
 ninja1.sayName();
 ninja1.showStats();
+
+console.log("----------------------------");
+//Segunda parte
+class Sensei extends Ninja {
+    constructor(nombre){
+        super(nombre);
+        this.salud = 200;
+        this.velocidad = 10;
+        this.fuerza = 10;
+        this.sabiduria = 10;   
+    };
+    speakWisdom() {
+        this.drinkSake();
+        console.log("Aprender programación debes");
+    };
+};
+
+const sensei1 = new Sensei("Sensei1");
+
+sensei1.showStats();
+sensei1.speakWisdom();
+sensei1.showStats();
